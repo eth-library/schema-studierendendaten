@@ -225,7 +225,7 @@
                             </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="rueckmeldestatus" type="stud:nonEmptyString"/>
-                        <xsd:element name="hoerstatus" type="stud:nonEmptyString" minOccurs="0"/>
+                        <xsd:element name="hoererstatus" type="stud:nonEmptyString" minOccurs="0"/>
                         <xsd:element name="urlaubssemester" type="stud:nonEmptyString" minOccurs="0"/>
                         <xsd:element name="beurlaubungsgrund" type="stud:nonEmptyString"
                             minOccurs="0"/>
@@ -247,7 +247,7 @@
                                                   <xsd:element name="antragstyp"
                                                   type="stud:nonEmptyString"/>
                                                   <xsd:element name="entscheid"
-                                                  type="stud:nonEmptyString"/>
+                                                  type="stud:nonEmptyString" minOccurs="0"/>
                                                   <xsd:element maxOccurs="1" minOccurs="0"
                                                   name="umfang" type="stud:GeldbetragType"/>
                                                   </xsd:sequence>
@@ -419,7 +419,7 @@
                         <xsd:element name="leistungen" minOccurs="0">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                    <xsd:element name="leistung" maxOccurs="unbounded" minOccurs="0">
+                                    <xsd:element name="leistung" maxOccurs="unbounded" minOccurs="1">
                                         <xsd:complexType>
                                             <xsd:sequence>
                                                 <xsd:element name="pruefungssemester"
@@ -668,8 +668,9 @@
                 </xsd:annotation>
             </xsd:element>
             <xsd:element minOccurs="0" name="pruefungsstatus" type="stud:nonEmptyString"/>
-            <xsd:element maxOccurs="unbounded" name="betreurIn" type="stud:nonEmptyString"/>
-            <xsd:element minOccurs="0" name="co-prueferIn" type="stud:nonEmptyString"/>
+            <xsd:element maxOccurs="unbounded" name="betreuerIn" type="stud:nonEmptyString"/>
+            <xsd:element minOccurs="0" name="co-prueferIn" type="stud:nonEmptyString"
+                maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="StudiengangType">
@@ -709,7 +710,7 @@
             <xsd:element name="ort" type="stud:nonEmptyString"/>
             <xsd:element name="kanton" type="stud:nonEmptyString" minOccurs="0"/>
             <xsd:element name="land" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="anschriftenzusatz" type="stud:nonEmptyString" minOccurs="0"/>
+            <xsd:element name="adresszusatz" type="stud:nonEmptyString" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="GeldbetragType">
