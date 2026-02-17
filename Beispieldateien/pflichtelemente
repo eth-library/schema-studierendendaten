@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studierendendaten xmlns="http://schemas.library.ethz.ch/xmlns/studierendendaten/1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <personenstammdaten>
+        <name>
+            <nachname>Mustermann</nachname>
+        </name>
+        <geburt>
+            <datum>1976-05-04</datum>
+        </geburt>
+        <matrikelnummer>01555553</matrikelnummer>
+        <immatrikulationsdatum>2001-01-06</immatrikulationsdatum>
+        <exmatrikulation>
+            <grund>abschluss</grund>
+            <datum>2005-01-06</datum>
+        </exmatrikulation>
+        <hochschulzulassungsberechtigung>
+            <hochschulzugangsberechtigung>
+                <art>Berufsmaturitätsschule</art>
+                <abschlussdatum>1992-06-07</abschlussdatum>
+            </hochschulzugangsberechtigung>
+        </hochschulzulassungsberechtigung>
+        <anschriften>
+        </anschriften>
+        <vertretung>
+            <name>
+                <nachname>Mustermann</nachname>
+            </name>
+            <anschrift>
+                <strasse>Carl-Benz-Strasse</strasse>
+                <postleitzahl>78467</postleitzahl>
+                <ort>Konstanz</ort>
+            </anschrift>
+        </vertretung>
+        <letztesBearbeitungsdatum>2006-05-04</letztesBearbeitungsdatum>
+    </personenstammdaten>
+    <studienverlauf>
+        <studiensemester>
+            <semester>2002 Winter</semester>
+            <hochschulsemester>2</hochschulsemester>
+            <rueckmeldestatus>zurückgemeldet</rueckmeldestatus>
+            <studiengang>
+                <abschlussziel>Doctor of Sciences</abschlussziel>
+                <faecher>
+                    <fach>
+                        <fachrichtung>
+                            <fachbezeichnung>Nachhaltige Architektur</fachbezeichnung>
+                        </fachrichtung>
+                        <fachtyp>Hauptfach</fachtyp>
+                        <fachsemester>2</fachsemester>
+                    </fach>
+                </faecher>
+            </studiengang>
+        </studiensemester>
+    </studienverlauf>
+</studierendendaten>
