@@ -655,7 +655,7 @@
                     <xsd:documentation>Dissertationsnummer der Doktorarbeit</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element minOccurs="1" name="pruefungsdatum" type="stud:nonEmptyString"
+            <xsd:element minOccurs="1" name="pruefungsdatum" type="xsd:date"
                 maxOccurs="unbounded"/>
             <xsd:element minOccurs="0" name="beantragterTitel" type="stud:nonEmptyString">
                 <xsd:annotation>
