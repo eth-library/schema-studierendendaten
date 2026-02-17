@@ -12,6 +12,10 @@ In diesem Repositorium findet sich:
 - Dieses Readme, welche das Schema und deren Nutzung beschreibt
 - Beispieldateien von XML-Dateien, die dem Schema folgen
 
+### Hinweis zu den Beispieldateien
+
+Im Ordner «Beispieldateien» finden sich zwei Beispiele. Die XML-Datei *alle-elemente.xml* beinhaltet jedes erlaubte Elemente mindestens einmal und ein `xsi:schemaLocation`-Attribut, während die XML-Datei *pflichtelemente.xml* nur alle Pflichtelemente enthält und kein `xsi:schemaLocation`-Attribut. Die Beispieldateien dienen nur zur Veranschaulichung und bilden selbst nicht zwingend ein plausibles oder vollständiges Studierendendossier ab. Zu beachten ist ebenfalls, dass das Element `anschriften` nicht vorgibt, dass ein Element `heimatanschrift` oder `semesteranschrift` Pflicht ist, allerdings sollte effektiv mindestens eines dieser Elemente vorhanden sein.
+
 ## Wie das XML-Schema genutzt wird
 
 XML-Dateien können auf zwei Ebenen auf ihre syntaktische Korrektheit überprüft werden. Eine wohlgeformte XML-Datei (well-formed) hält die grundsätzlichen Regeln von XML ein, während eine gültige XML-Datei (valid) sich zusätzlich an ein vorgegebenes Schema hält. Ein XML-Schema deklariert, welche Datenelemente in einer XML-Datei vorhanden sein dürfen und wie diese strukturiert sind. Durch diese Vorgaben kann sichergestellt werden, dass ein XML nur Daten enthält, die vom Schema her zu erwarten sind. Beim Erstellen einer XML-Datei muss sich an das vorgegebene Schema gehalten werden. Das Schema kann zusätzlich mit einem Validator genutzt werden, die XML-Dateien auf ihre Gültigkeit zu prüfen. Im Ordner «Beispieldateien» findet sich eine Sammlung von gültigen XML-Dateien.
@@ -29,7 +33,7 @@ Das Kompetenznetzwerk Langzeitarchivierung und Langzeitverfügbarkeit digitaler 
 
 #### Anpassungen für Einhaltung von eCH-0018
 
-- Definitionen von Complex Types wurde "Type" hinzugefügt (Kapitel 3.2)
+- Definitionen von Complex Types wurde «Type» hinzugefügt (Kapitel 3.2)
 - Für Elemente, deren Sprache im nestor-Standard mit dem `xml:lang`-Attribut deklariert sind, wurden stattdessen eigene Elemente (Value-Pair) eingeführt (Kapitel 3.7.2). Das Element wurde in diesem Zuge meist ebenfalls leicht angepasst und unique-Constrains, die sich auf diese Elemente bezogen haben wurden entfernt.
 
 #### Im Element PersonenstammdatenType
