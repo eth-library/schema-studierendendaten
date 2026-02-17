@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<studierendendaten xmlns="http://schemas.library.ethz.ch/xmlns/studierendendaten/1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://schemas.library.ethz.ch/xmlns/studierendendaten/1 ../studierendendaten.xsd">
+    <personenstammdaten>
+        <name>
+            <nachname>Mustermann</nachname>
+            <geburtsname>Muster</geburtsname>
+            <vorname>Maximiliam</vorname>
+            <namenszusaetze>
+                <namenszusatz typ="vorangestellt">Dr.</namenszusatz>
+                <namenszusatz typ="mittig">von</namenszusatz>
+                <namenszusatz typ="nachgestellt">zu Vorlage</namenszusatz>
+            </namenszusaetze>
+            <abweichenderName>Max</abweichenderName>
+            <fruehererName>Erika</fruehererName>
+        </name>
+        <geschlecht>männlich</geschlecht>
+        <fruehereGeschlechter>
+            <frueheresGeschlecht>weiblich</frueheresGeschlecht>
+        </fruehereGeschlechter>
+        <geburt>
+            <datum>1976-05-04</datum>
+            <geburtsort>
+                <ort>Aarau</ort>
+                <kanton>Aargau</kanton>
+                <land>Schweiz</land>
+            </geburtsort>
+        </geburt>
+        <todesdatum>2021-05-04</todesdatum>
+        <heimatorte>
+            <heimatort>
+                <ort>Malters</ort>
+                <kanton>Luzern</kanton>
+            </heimatort>
+            <heimatort>
+                <ort>Aarau</ort>
+                <kanton>Aargau</kanton>
+            </heimatort>
+        </heimatorte>
+        <herkunftsland>Deutschland</herkunftsland>
+        <staatsbuergerschaften>
+            <staatsbuergerschaft>Schweiz</staatsbuergerschaft>
+            <staatsbuergerschaft>Deutschland</staatsbuergerschaft>
+        </staatsbuergerschaften>
+        <zivilstand>ledig</zivilstand>
+        <matrikelnummer>01555553</matrikelnummer>
+        <immatrikulationsdatum>2001-01-06</immatrikulationsdatum>
+        <exmatrikulation>
+            <grund>Abschluss</grund>
+            <datum>2005-01-06</datum>
+        </exmatrikulation>
+        <hochschulzulassungsberechtigung>
+            <hochschulzugangsberechtigung>
+                <art>Berufsmaturitätsschule</art>
+                <abschlussdatum>1992-06-07</abschlussdatum>
+                <maturatyp>Berufsmaturität</maturatyp>
+                <schule>Berufsmaturitätsschule Aarau</schule>
+                <ort>Aarau</ort>
+                <kanton>Aargau</kanton>
+                <land>Schweiz</land>
+                <note>5.25</note>
+            </hochschulzugangsberechtigung>
+        </hochschulzulassungsberechtigung>
+        <externeAbschluesse>
+            <externerAbschluss>
+                <hochschule>Hochschule München</hochschule>
+                <studiengang>
+                    <sprache>Deutsch</sprache>
+                    <studiengangsbezeichnung>Architektur</studiengangsbezeichnung>
+                </studiengang>
+                <abschlussart>Bestanden</abschlussart>
+                <abschlussdatum>2000-05-04</abschlussdatum>
+                <abschlussnote>5.0</abschlussnote>
+            </externerAbschluss>
+        </externeAbschluesse>
+        <vorbildungen>
+            <vorbildung>
+                <art>Hochbauzeichner EFZ</art>
+                <zeitraum>
+                    <beginn>1988-02-03</beginn>
+                    <ende>1992-05-04</ende>
+                    <anmerkung>letztes Jahr wiederholt</anmerkung>
+                </zeitraum>
+                <dauer>4</dauer>
+                <einrichtung>Architekturbüro am Bau</einrichtung>
+                <note>5.5</note>
+            </vorbildung>
+        </vorbildungen>
+        <anschriften>
+            <heimatanschrift>
+                <strasse>Bahnhofstrasse</strasse>
+                <hausnummer>1</hausnummer>
+                <postleitzahl>5000</postleitzahl>
+                <ort>Aarau</ort>
+                <kanton>Aargau</kanton>
+                <land>Schweiz</land>
+                <adresszusatz>4. Stock</adresszusatz>
+            </heimatanschrift>
+            <semesteranschrift>
+                <strasse>Talstrasse</strasse>
+                <hausnummer>33</hausnummer>
+                <postleitzahl>8001</postleitzahl>
+                <ort>Zürich</ort>
+                <kanton>Zürich</kanton>
+                <land>Schweiz</land>
+            </semesteranschrift>
+        </anschriften>
+        <vertretung>
+            <name>
+                <nachname>Mustermann</nachname>
+                <geburtsname>Vorlagenfrau</geburtsname>
+                <vorname>Verona</vorname>
+            </name>
+            <anschrift>
+                <strasse>Carl-Benz-Strasse</strasse>
+                <hausnummer>1</hausnummer>
+                <postleitzahl>78467</postleitzahl>
+                <ort>Konstanz</ort>
+                <kanton>Konstanz</kanton>
+                <land>Deutschland</land>
+            </anschrift>
+        </vertretung>
+        <zielhochschule>ETH Zürich</zielhochschule>
+        <letztesBearbeitungsdatum>2026-02-10</letztesBearbeitungsdatum>
+    </personenstammdaten>
+    <studienverlauf>
+        <studiensemester>
+            <semester>2002 Winter</semester>
+            <semesterwochenstunden>36</semesterwochenstunden>
+            <hochschulsemester>2</hochschulsemester>
+            <rueckmeldestatus>zurückgemeldet</rueckmeldestatus>
+            <hoererstatus>Doktorierend</hoererstatus>
+            <urlaubssemester>2002 Sommer</urlaubssemester>
+            <beurlaubungsgrund>Wehrpflicht</beurlaubungsgrund>
+            <finanzierung>
+                <selbstfinanziert>Nein</selbstfinanziert>
+                <stipendien>
+                    <stipendium>
+                        <antragstyp>Kantonaler Stipendienantrag</antragstyp>
+                        <entscheid>genehmigt</entscheid>
+                        <umfang>
+                            <waehrung>CHF</waehrung>
+                            <betrag>5000</betrag>
+                        </umfang>
+                    </stipendium>
+                </stipendien>
+            </finanzierung>
+            <studiengang>
+                <studiengang>
+                    <sprache>de-CH</sprache>
+                    <studiengangsbezeichnung>Doktorat Architektur</studiengangsbezeichnung>
+                </studiengang>
+                <abschlussziel>Doctor of Sciences</abschlussziel>
+                <studienart>Präsenzstudium</studienart>
+                <studientyp>Vollzeit</studientyp>
+                <studienform>Ausbaustudium</studienform>
+                <faecher>
+                    <fach>
+                        <fachrichtung>
+                            <sprache>de-CH</sprache>
+                            <fachbezeichnung>Nachhaltige Architektur</fachbezeichnung>
+                        </fachrichtung>
+                        <fachrichtung>
+                            <sprache>en</sprache>
+                            <fachbezeichnung>Green Architecture</fachbezeichnung>
+                        </fachrichtung>
+                        <schwerpunkt>Nachhaltiges Bauen</schwerpunkt>
+                        <vertiefung>Regenerative Baustoffe</vertiefung>
+                        <fachtyp>Hauptfach</fachtyp>
+                        <fachsemester>2</fachsemester>
+                        <fachbereich>Ökologie</fachbereich>
+                        <fachbeginn>2001-08-01</fachbeginn>
+                    </fach>
+                    <fach>
+                        <fachrichtung>
+                            <sprache>de-CH</sprache>
+                            <fachbezeichnung>Japanische Architektur</fachbezeichnung>
+                        </fachrichtung>
+                        <fachtyp>Nebenfach</fachtyp>
+                        <fachsemester>2</fachsemester>
+                    </fach>
+                </faecher>
+            </studiengang>
+        </studiensemester>
+    </studienverlauf>
+    <studienleistungen>
+        <studiengang>
+            <studiengang>
+                <sprache>de-CH</sprache>
+                <studiengangsbezeichnung>Doktorat Architektur</studiengangsbezeichnung>
+            </studiengang>
+            <studienabteilung>
+                <departement>Departemenet Architektur</departement>
+            </studienabteilung>
+            <studiengangsbeginn>2001-05-04</studiengangsbeginn>
+            <studiengangsbeendigung>
+                <grund>Abschluss</grund>
+                <datum>2004-05-04</datum>
+            </studiengangsbeendigung>
+            <abschlussart>Doktortitel</abschlussart>
+            <geltendePruefungsordnung>Verordnung der ETH Zürich über Lerneinheiten und Leistungskontrollen an der ETH Zürich</geltendePruefungsordnung>
+            <geltendeDoktoratsverordnung>Verordnung über das Doktorat an der ETH Zürich</geltendeDoktoratsverordnung>
+            <abschlussdatum>2004-05-04</abschlussdatum>
+            <abschlussnote>5.5</abschlussnote>
+            <studienerfolg>bestanden</studienerfolg>
+            <leistungen>
+                <leistung>
+                    <pruefungssemester>3</pruefungssemester>
+                    <fachrichtung>
+                        <sprache>de-CH</sprache>
+                        <fachbezeichnung>Nachhaltige Architektur</fachbezeichnung>
+                    </fachrichtung>
+                    <fachrichtung>
+                        <sprache>en</sprache>
+                        <fachbezeichnung>Green Architecture</fachbezeichnung>
+                    </fachrichtung>
+                    <modulcode>0512</modulcode>
+                    <modul>
+                        <modulbezeichnung>Doktorat Architektur</modulbezeichnung>
+                    </modul>
+                    <veranstaltung>
+                        <sprache>de-CH</sprache>
+                        <veranstaltungsbezeichnung>Japanische Architektur</veranstaltungsbezeichnung>
+                    </veranstaltung>
+                    <pruefungstyp>Doktorprüfung</pruefungstyp>
+                    <pruefungsdatum>2004-05-04</pruefungsdatum>
+                    <pruefungsart>Doktorarbeit</pruefungsart>
+                    <pruefungsform>reale Prüfung</pruefungsform>
+                    <anerkannteLeistung>ja</anerkannteLeistung>
+                    <externeHochschule>Hochschule München</externeHochschule>
+                    <abschlusstragendeLeistung>ja</abschlusstragendeLeistung>
+                    <note>5.5</note>
+                    <creditPoints>30</creditPoints>
+                    <pruefungsstatus>bestanden</pruefungsstatus>
+                    <prueferIn>Prof. Jane Doe</prueferIn>
+                    <arbeitstitel>arbeitstitel0</arbeitstitel>
+                    <auszeichnungen>
+                        <auszeichnung>Auszeichnung für besonders nachhaltiges Bauen</auszeichnung>
+                    </auszeichnungen>
+                    <vermerk>Kein Vermerk</vermerk>
+                    <doktorarbeit>
+                        <titel>Der Umgang mit regenerativen Materialien in der traditionellen japanischen Architektur</titel>
+                        <dissertationsnummer>0123456789</dissertationsnummer>
+                        <pruefungsdatum>2004-05-01</pruefungsdatum>
+                        <betreuerIn>Prof. John Doe</betreuerIn>
+                        <betreuerIn>Dr. Max Doe</betreuerIn>
+                    </doktorarbeit>
+                </leistung>
+            </leistungen>
+        </studiengang>
+    </studienleistungen>
+</studierendendaten>
