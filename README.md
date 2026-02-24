@@ -1,7 +1,7 @@
 XML-Schema für Studierendendaten
 ==================
 
-Version: 1.0
+Version: 0.1
 
 ## Einführung ##
 
