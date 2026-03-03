@@ -35,3 +35,28 @@ check-no-entities:
 
 # Run all validation checks
 validate: validate-schema validate-examples check-encoding check-no-entities
+
+# Generate Pages data and per-major-version schema directories from GitHub releases
+generate-pages:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd pages
+    mkdir -p _data
+    gh release list --limit 100 --json tagName,publishedAt,name > _data/releases.json
+    gh release list --limit 100 --json tagName \
+      --jq '[.[].tagName | ltrimstr("v") | split(".")[0]] | unique | map({major: .})' \
+      > _data/schemas.json
+    for major in $(jq -r '.[].major' _data/schemas.json); do
+      dir="xmlns/studierendendaten/$major"
+      mkdir -p "$dir"
+      latest_tag=$(gh release list --limit 100 --json tagName \
+        --jq "[.[].tagName | select(startswith(\"v${major}.\"))] | .[0]")
+      gh release download "$latest_tag" --pattern "studierendendaten.xsd" \
+        --dir "$dir" --clobber
+      sed "s/__MAJOR__/$major/g" _templates/schema-version.md > "$dir/index.md"
+    done
+    echo "Pages generated."
+
+# Serve GitHub Pages site locally for preview
+serve-pages: generate-pages
+    cd pages && bundle install --quiet && bundle exec jekyll serve --livereload
