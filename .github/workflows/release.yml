@@ -31,14 +31,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v30
 
-      - name: Generate Pages content
-        run: nix develop -c just generate-pages
+      - name: Build Pages
+        run: nix develop -c just build-pages
         env:
           GH_TOKEN: ${{ github.token }}
+          JEKYLL_ENV: production
 
       - uses: actions/configure-pages@v5
-      - uses: actions/jekyll-build-pages@v1
-        with:
-          source: pages
       - uses: actions/upload-pages-artifact@v3
       - uses: actions/deploy-pages@v4
