@@ -1,0 +1,12 @@
+# IDE
+.idea/
+
+# Jekyll / Bundler
+pages/_site/
+pages/.jekyll-cache/
+pages/vendor/
+pages/Gemfile.lock
+
+# Generated Pages content
+pages/_data/
+pages/xmlns/

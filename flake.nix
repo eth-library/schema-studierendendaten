@@ -18,6 +18,8 @@
             buildInputs = [
               pkgs.libxml2
               pkgs.just
+              pkgs.ruby
+              pkgs.bundler
             ];
           };
         }

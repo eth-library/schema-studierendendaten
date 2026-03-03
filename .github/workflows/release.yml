@@ -7,8 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write
-      id-token: write
     steps:
       - uses: actions/checkout@v4
 
@@ -22,11 +20,25 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
 
-      - name: Prepare GitHub Pages
-        run: |
-          mkdir -p _site/xmlns/studierendendaten/1
-          cp studierendendaten.xsd _site/xmlns/studierendendaten/1/
+  deploy-pages:
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v30
 
+      - name: Generate Pages content
+        run: nix develop -c just generate-pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: pages
       - uses: actions/upload-pages-artifact@v3
-
       - uses: actions/deploy-pages@v4
