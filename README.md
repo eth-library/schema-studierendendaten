@@ -12,6 +12,8 @@ In diesem Repositorium findet sich:
 - Dieses Readme, welche das Schema und deren Nutzung beschreibt
 - Beispieldateien von XML-Dateien, die dem Schema folgen
 
+Hinweise zur Mitarbeit an diesem Projekt finden sich in der [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ### Hinweis zu den Beispieldateien
 
 Im Ordner «Beispieldateien» finden sich zwei Beispiele. Die XML-Datei *alle-elemente.xml* beinhaltet jedes erlaubte Elemente mindestens einmal und ein `xsi:schemaLocation`-Attribut, während die XML-Datei *pflichtelemente.xml* nur alle Pflichtelemente enthält und kein `xsi:schemaLocation`-Attribut. Die Beispieldateien dienen nur zur Veranschaulichung und bilden selbst nicht zwingend ein plausibles oder vollständiges Studierendendossier ab. Zu beachten ist ebenfalls, dass das Element `anschriften` nicht vorgibt, dass ein Element `heimatanschrift` oder `semesteranschrift` Pflicht ist, allerdings sollte effektiv mindestens eines dieser Elemente vorhanden sein.
