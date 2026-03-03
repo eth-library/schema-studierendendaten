@@ -1,0 +1,27 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create GitHub release
+        run: gh release create "$GITHUB_REF_NAME" studierendendaten.xsd --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Prepare GitHub Pages
+        run: |
+          mkdir -p _site/xmlns/studierendendaten/1
+          cp studierendendaten.xsd _site/xmlns/studierendendaten/1/
+
+      - uses: actions/upload-pages-artifact@v3
+
+      - uses: actions/deploy-pages@v4
