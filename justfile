@@ -57,6 +57,10 @@ generate-pages:
     done
     echo "Pages generated."
 
+# Build Jekyll site into _site
+build-pages: generate-pages
+    cd pages && bundle install --quiet && bundle exec jekyll build --destination ../_site
+
 # Serve GitHub Pages site locally for preview
 serve-pages: generate-pages
     cd pages && bundle install --quiet && bundle exec jekyll serve --livereload
