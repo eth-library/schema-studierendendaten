@@ -169,7 +169,8 @@ directly.
 3. **GitHub Actions takes over automatically:**
    - Creates a GitHub release from the tag
    - Attaches `studierendendaten.xsd` as a release asset
-   - Deploys the XSD to GitHub Pages
+   - Generates landing pages for all major versions from release data
+   - Builds the Jekyll site and deploys to GitHub Pages
 
 ### Schema hosting
 
@@ -183,14 +184,19 @@ Browser / XML tool
   → https://schemas.library.ethz.ch/xmlns/studierendendaten/1/studierendendaten.xsd
   → reverse proxy at ETH (invisible to user)
   → https://eth-library.github.io/schema-studierendendaten/xmlns/studierendendaten/1/studierendendaten.xsd
-  → served by GitHub Pages
+  → served by GitHub Pages (Jekyll)
 ```
 
-The namespace URI (`/1/`) serves as the landing directory for the current major
-version. The XSD file is available at the full path:
+The GitHub Pages site is built with Jekyll (minimal theme) from the `pages/`
+directory. Only `pages/_config.yml` and `pages/index.md` are checked into the
+repo — everything else (release data, per-major-version landing pages, XSD
+copies) is generated automatically by the release workflow. New major versions
+get their own landing page and XSD without any manual file creation.
+
+The XSD file for each major version is available at:
 
 ```
-https://schemas.library.ethz.ch/xmlns/studierendendaten/1/studierendendaten.xsd
+https://schemas.library.ethz.ch/xmlns/studierendendaten/{major}/studierendendaten.xsd
 ```
 
 Specific versions are also available as GitHub release assets.
