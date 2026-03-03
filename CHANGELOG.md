@@ -14,17 +14,45 @@ based on the [nestor schema](https://nbn-resolving.org/urn:nbn:de:0008-202305031
 
 ### Added
 
+#### Schema
+
 - XML Schema (`studierendendaten.xsd`) with namespace
   `https://schemas.library.ethz.ch/xmlns/studierendendaten/1`
 - `version="1.0.0"` attribute on `xsd:schema` element
 - Example files in `Beispieldateien/`:
   - `pflichtelemente.xml` — mandatory elements only
   - `alle-elemente.xml` — all permitted elements
-- Nix flake (`flake.nix`) providing `libxml2` and `just` via `nix develop`
-- `justfile` with validation recipes: `validate-schema`, `validate-examples`,
-  `check-encoding`, `check-no-entities`, and `validate` (runs all)
-- GitHub Actions CI workflow (`.github/workflows/validate.yml`)
-  running `nix develop -c just validate` on push and pull request
+
+#### Tooling
+
+- Nix flake (`flake.nix`) providing `libxml2`, `just`, `ruby`, and `bundler`
+  via `nix develop`
+- `justfile` with recipes: `validate-schema`, `validate-examples`,
+  `check-encoding`, `check-no-entities`, `validate`, `generate-pages`,
+  `build-pages`, and `serve-pages`
+- `.gitignore` for generated content and IDE files
+
+#### CI/CD
+
+- Validation workflow (`.github/workflows/validate.yml`) running
+  `nix develop -c just validate` on push and pull request
+- Release workflow (`.github/workflows/release.yml`) triggered on `v*` tags:
+  creates GitHub release, attaches XSD, builds and deploys GitHub Pages
+
+#### GitHub Pages
+
+- Jekyll-based site (minimal theme) with auto-generated landing pages
+  per major schema version
+- Schema version template (`pages/_templates/schema-version.md`) with
+  `__MAJOR__` placeholder for automatic generation
+- Release data fetched from GitHub API at build time
+
+#### Documentation
+
+- `CONTRIBUTING.md` with language conventions, dev setup, branching,
+  conventional commits, versioning strategy, release process, schema
+  hosting, and eCH-0018 compliance rules
+- `CHANGELOG.md` following [Keep a Changelog](https://keepachangelog.com/) format
 - Versioning strategy documented in README following eCH-0018 namespace conventions
 
 ### Changed (relative to nestor schema)
