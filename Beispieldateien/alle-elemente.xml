@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<studierendendaten xmlns="http://schemas.library.ethz.ch/xmlns/studierendendaten/1"
+<studierendendaten xmlns="https://schemas.library.ethz.ch/xmlns/studierendendaten/1"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://schemas.library.ethz.ch/xmlns/studierendendaten/1 ../studierendendaten.xsd">
+ xsi:schemaLocation="https://schemas.library.ethz.ch/xmlns/studierendendaten/1 ../studierendendaten.xsd">
     <personenstammdaten>
         <name>
             <nachname>Mustermann</nachname>

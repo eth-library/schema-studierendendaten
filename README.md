@@ -1,7 +1,7 @@
 XML-Schema für Studierendendaten
 ==================
 
-Version: 0.1
+Version: 1.0.0
 
 ## Einführung ##
 
@@ -79,3 +79,29 @@ Das Kompetenznetzwerk Langzeitarchivierung und Langzeitverfügbarkeit digitaler 
 
 - Die Elemente `landkreis` wurden auf `kanton` umbenannt.
 - Das Element `anschriftenszusatz` wurde im Complex Type `AnschriftType` auf `adresszusatz` umbenannt.
+
+## Versionierung
+
+Dieses Schema folgt [Semantic Versioning](https://semver.org/) (Major.Minor.Patch). Die aktuelle Version ist im `version`-Attribut des `xsd:schema`-Elements sowie in diesem README dokumentiert. Releases werden als Git-Tags (`v1.0.0`, `v1.1.0`, ...) erstellt.
+
+### Namespace-URI und Versionierung
+
+Gemäss [eCH-0018](https://www.ech.ch/de/ech/ech-0018/2.0) enthält die Namespace-URI nur die Major-Version:
+
+```
+https://schemas.library.ethz.ch/xmlns/studierendendaten/1
+```
+
+Die Namespace-URI ändert sich nur bei einem Major-Versionssprung (z.B. von `/1` auf `/2`). Minor- und Patch-Versionen behalten dieselbe Namespace-URI, da bestehende XML-Dokumente weiterhin gültig bleiben.
+
+### Was ist ein Major-, Minor- oder Patch-Versionssprung?
+
+| Versionssprung | Namespace-URI | Beispiel |
+|---|---|---|
+| **Patch** (1.0.0 → 1.0.1) | bleibt `/1` | Korrektur in der Dokumentation, Tippfehler in `xsd:documentation` |
+| **Minor** (1.0.0 → 1.1.0) | bleibt `/1` | Neues optionales Element (z.B. `emailAdresse`), neuer optionaler ComplexType, Lockerung einer Einschränkung (z.B. `minOccurs="1"` → `minOccurs="0"`) |
+| **Major** (1.0.0 → 2.0.0) | wird `/2` | Entfernung oder Umbenennung eines Elements, Verschärfung einer Einschränkung (z.B. `minOccurs="0"` → `minOccurs="1"`), Änderung der Elementreihenfolge |
+
+### Grundsatz
+
+Ein Major-Versionssprung bedeutet, dass bestehende XML-Dokumente möglicherweise nicht mehr gültig sind. Solange bestehende Dokumente weiterhin validieren, bleibt die Namespace-URI unverändert.
