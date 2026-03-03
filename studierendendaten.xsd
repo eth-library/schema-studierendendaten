@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:stud="http://schemas.library.ethz.ch/xmlns/studierendendaten/1"
+<xsd:schema xmlns:stud="https://schemas.library.ethz.ch/xmlns/studierendendaten/1"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://schemas.library.ethz.ch/xmlns/studierendendaten/1"
-    elementFormDefault="qualified">
+    targetNamespace="https://schemas.library.ethz.ch/xmlns/studierendendaten/1"
+    elementFormDefault="qualified"
+    version="1.0.0">
     <xsd:annotation>
         <xsd:documentation xml:lang="de">Dieses Dokument beschreibt ein standardisiertes XML-Format zur Archivierung von Studierendendaten (Studierendenentität). Es basiert auf dem nestor-Archivstandard "Archivierung von Studierendendaten aus Fachverfahren" vom Mai 2023, Version 1.0, wurde aber an die Schweizer Verhältnisse und an den eCH-0018-Standard zu XML Best Practices angepasst. Dazu gehören Anpassungen an der Struktur und der Benennung von Elementen. Zudem wurde der Standard erweitert und schliesst neben Studierendendaten auch Doktorierendendaten (inklusive Doktorarbeit) ein. XML-Dokumente, die diesem Schema folgen, halten alle Pflichtanforderungen des eCH-0018-Standards ein.</xsd:documentation>
     </xsd:annotation>
