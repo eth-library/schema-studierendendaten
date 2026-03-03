@@ -27,7 +27,7 @@
         </xsd:annotation>
         <xsd:sequence>
             <xsd:element name="name" type="stud:NameType"/>
-            <xsd:element name="geschlecht" type="stud:nonEmptyString" minOccurs="0">
+            <xsd:element name="geschlecht" type="stud:NonEmptyStringType" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>Angabe zum Geschlecht der Person.</xsd:documentation>
                 </xsd:annotation>
@@ -39,7 +39,7 @@
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element maxOccurs="unbounded" minOccurs="0" name="frueheresGeschlecht"
-                            type="stud:nonEmptyString"/>
+                            type="stud:NonEmptyStringType"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
@@ -60,7 +60,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element minOccurs="0" name="herkunftsland" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="herkunftsland" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Angabe zu dem Land, wo die Person ihren letzten Wohnsitz hatte.</xsd:documentation>
                 </xsd:annotation>
@@ -71,22 +71,22 @@
                 </xsd:annotation>
                 <xsd:complexType>
                     <xsd:sequence>
-                        <xsd:element name="staatsbuergerschaft" type="stud:nonEmptyString"
+                        <xsd:element name="staatsbuergerschaft" type="stud:NonEmptyStringType"
                             maxOccurs="unbounded"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="zivilstand" type="stud:nonEmptyString" minOccurs="0">
+            <xsd:element name="zivilstand" type="stud:NonEmptyStringType" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation>Das schweizerische Recht kennt folgende Zivilstände: "ledig", "verheiratet", "geschieden", "verwitwet", "unverheiratet", "in eingetragener Partnerschaft", "gerichtlich aufgelöste Partnerschaft", "durch Tod aufgelöste Partnerschaft", "durch Verschollenerklärung aufgelöste Partnerschaft"</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="matrikelnummer" type="stud:nonEmptyString"/>
+            <xsd:element name="matrikelnummer" type="stud:NonEmptyStringType"/>
             <xsd:element name="immatrikulationsdatum" type="xsd:date"/>
             <xsd:element name="exmatrikulation">
                 <xsd:complexType>
                     <xsd:sequence>
-                        <xsd:element name="grund" type="stud:nonEmptyString"/>
+                        <xsd:element name="grund" type="stud:NonEmptyStringType"/>
                         <xsd:element name="datum" type="xsd:date"/>
                     </xsd:sequence>
                 </xsd:complexType>
@@ -97,22 +97,22 @@
                         <xsd:element name="hochschulzugangsberechtigung" maxOccurs="unbounded">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                    <xsd:element name="art" type="stud:nonEmptyString"/>
-                                    <xsd:element name="abschlussdatum" type="stud:nonEmptyString">
+                                    <xsd:element name="art" type="stud:NonEmptyStringType"/>
+                                    <xsd:element name="abschlussdatum" type="stud:NonEmptyStringType">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Datums- oder Jahresangabe</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element minOccurs="0" name="maturatyp"
-                                        type="stud:nonEmptyString"/>
+                                        type="stud:NonEmptyStringType"/>
                                     <xsd:element minOccurs="0" name="schule"
-                                        type="stud:nonEmptyString"/>
-                                    <xsd:element name="ort" type="stud:nonEmptyString" minOccurs="0"/>
-                                    <xsd:element name="kanton" type="stud:nonEmptyString"
+                                        type="stud:NonEmptyStringType"/>
+                                    <xsd:element name="ort" type="stud:NonEmptyStringType" minOccurs="0"/>
+                                    <xsd:element name="kanton" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
-                                    <xsd:element name="land" type="stud:nonEmptyString"
+                                    <xsd:element name="land" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
-                                    <xsd:element name="note" type="stud:nonEmptyString"
+                                    <xsd:element name="note" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
                                 </xsd:sequence>
                             </xsd:complexType>
@@ -129,15 +129,15 @@
                         <xsd:element maxOccurs="unbounded" name="externerAbschluss">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                    <xsd:element name="hochschule" type="stud:nonEmptyString"/>
+                                    <xsd:element name="hochschule" type="stud:NonEmptyStringType"/>
                                     <xsd:element name="studiengang" type="stud:StudiengangType">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Zum Beispiel: "Bachelor of Science Chemie", "Lehramt Sport und Mathematik"</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="abschlussart" type="stud:nonEmptyString"/>
+                                    <xsd:element name="abschlussart" type="stud:NonEmptyStringType"/>
                                     <xsd:element name="abschlussdatum" type="xsd:date"/>
-                                    <xsd:element name="abschlussnote" type="stud:nonEmptyString"/>
+                                    <xsd:element name="abschlussnote" type="stud:NonEmptyStringType"/>
                                 </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
@@ -153,18 +153,18 @@
                         <xsd:element name="vorbildung" maxOccurs="unbounded">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                    <xsd:element name="art" type="stud:nonEmptyString"/>
+                                    <xsd:element name="art" type="stud:NonEmptyStringType"/>
                                     <xsd:element name="zeitraum" type="stud:ZeitraumType"
                                         minOccurs="0">
                                         <xsd:annotation>
                                             <xsd:documentation>Die Erfassung des zeitlichen Umfangs der Vorbildung erfolgt durch Angabe von Beginn- und Enddatum. Ist nur ein Datum relevant, z.B. das Abschlussdatum einer Ausbildung, so kann dies als alleiniges Datum in "Ende" erfasst werden. Zur Angabe der Dauer von z.B. Vorpraktika kann alternativ das Element "dauer" genutzt werden.</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="dauer" type="stud:nonEmptyString"
+                                    <xsd:element name="dauer" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
-                                    <xsd:element name="einrichtung" type="stud:nonEmptyString"
+                                    <xsd:element name="einrichtung" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
-                                    <xsd:element name="note" type="stud:nonEmptyString"
+                                    <xsd:element name="note" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
                                 </xsd:sequence>
                             </xsd:complexType>
@@ -196,7 +196,7 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="zielhochschule" type="stud:nonEmptyString" minOccurs="0">
+            <xsd:element name="zielhochschule" type="stud:NonEmptyStringType" minOccurs="0">
                 <xsd:annotation>
                     <xsd:documentation xml:lang="de">Bei Wechsel zu anderer Hochschule anzugeben.</xsd:documentation>
                 </xsd:annotation>
@@ -212,7 +212,7 @@
             <xsd:element name="studiensemester" maxOccurs="unbounded">
                 <xsd:complexType>
                     <xsd:sequence>
-                        <xsd:element name="semester" type="stud:nonEmptyString">
+                        <xsd:element name="semester" type="stud:NonEmptyStringType">
                             <xsd:annotation>
                                 <xsd:documentation xml:lang="de">Beispielsweise "Sommersemester 2022", "Wintersemester 2022/2023", "Erstes Trimester 2022"</xsd:documentation>
                             </xsd:annotation>
@@ -224,16 +224,16 @@
                                 <xsd:documentation xml:lang="de">Semesteranzahl des Studierenden an der Hochschule. Zum Beispiel "4"</xsd:documentation>
                             </xsd:annotation>
                         </xsd:element>
-                        <xsd:element name="rueckmeldestatus" type="stud:nonEmptyString"/>
-                        <xsd:element name="hoererstatus" type="stud:nonEmptyString" minOccurs="0"/>
-                        <xsd:element name="urlaubssemester" type="stud:nonEmptyString" minOccurs="0"/>
-                        <xsd:element name="beurlaubungsgrund" type="stud:nonEmptyString"
+                        <xsd:element name="rueckmeldestatus" type="stud:NonEmptyStringType"/>
+                        <xsd:element name="hoererstatus" type="stud:NonEmptyStringType" minOccurs="0"/>
+                        <xsd:element name="urlaubssemester" type="stud:NonEmptyStringType" minOccurs="0"/>
+                        <xsd:element name="beurlaubungsgrund" type="stud:NonEmptyStringType"
                             minOccurs="0"/>
                         <xsd:element minOccurs="0" name="finanzierung">
                             <xsd:complexType>
                                 <xsd:sequence>
                                     <xsd:element minOccurs="0" name="selbstfinanziert"
-                                        type="stud:nonEmptyString">
+                                        type="stud:NonEmptyStringType">
                                         <xsd:annotation>
                                             <xsd:documentation>Angabe ist nur für Doktorierende relevant.</xsd:documentation>
                                         </xsd:annotation>
@@ -245,9 +245,9 @@
                                                   <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element name="antragstyp"
-                                                  type="stud:nonEmptyString"/>
+                                                  type="stud:NonEmptyStringType"/>
                                                   <xsd:element name="entscheid"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                   <xsd:element maxOccurs="1" minOccurs="0"
                                                   name="umfang" type="stud:GeldbetragType"/>
                                                   </xsd:sequence>
@@ -268,24 +268,24 @@
                                             <xsd:documentation xml:lang="de">Zum Beispiel: "Bachelor of Science Chemie", "Lehramt Sport und Mathematik", "Doktorat"</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="abschlussziel" type="stud:nonEmptyString">
+                                    <xsd:element name="abschlussziel" type="stud:NonEmptyStringType">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Name des angestrebten Grads. Zum Beispiel: "Bachelor of Science", "Master of Arts", "Doctor of Sciences"</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="studienart" type="stud:nonEmptyString"
+                                    <xsd:element name="studienart" type="stud:NonEmptyStringType"
                                         minOccurs="0">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Zum Beispiel: "Präsenzstudium", "Fernstudium"</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="studientyp" type="stud:nonEmptyString"
+                                    <xsd:element name="studientyp" type="stud:NonEmptyStringType"
                                         minOccurs="0">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Zum Beispiel: "Vollzeit", "Teilzeit"</xsd:documentation>
                                         </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="studienform" type="stud:nonEmptyString"
+                                    <xsd:element name="studienform" type="stud:NonEmptyStringType"
                                         minOccurs="0">
                                         <xsd:annotation>
                                             <xsd:documentation xml:lang="de">Zum Beispiel: "Erststudium", "Aufbaustudium"</xsd:documentation>
@@ -304,19 +304,19 @@
                                                   </xsd:annotation>
                                                   </xsd:element>
                                                   <xsd:element name="schwerpunkt"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Beispiel für Schwerpunkt im Studiengang Betriebswirtschaftslehre: "Finanzen und Versicherung"</xsd:documentation>
                                                   </xsd:annotation>
                                                   </xsd:element>
                                                   <xsd:element name="vertiefung"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Beispiel für Vertiefung im Studiengang Germanistik: "Deutsch als Fremdsprache"</xsd:documentation>
                                                   </xsd:annotation>
                                                   </xsd:element>
                                                   <xsd:element name="fachtyp"
-                                                  type="stud:nonEmptyString">
+                                                  type="stud:NonEmptyStringType">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: "Hauptfach", "Nebenfach", "Zweitfach", "Unterrichtsfach"</xsd:documentation>
                                                   </xsd:annotation>
@@ -324,21 +324,21 @@
                                                   <xsd:element name="fachsemester"
                                                   type="xsd:positiveInteger"/>
                                                   <xsd:element name="fachbereich"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                   <xsd:element name="fachbeginn" type="xsd:date"
                                                   minOccurs="0"/>
                                                   <xsd:element name="fachbeendigung" minOccurs="0">
                                                   <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element name="grund"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                   <xsd:element name="datum" type="xsd:date"
                                                   minOccurs="0"/>
                                                   </xsd:sequence>
                                                   </xsd:complexType>
                                                   </xsd:element>
                                                   <xsd:element name="externeHochschule"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Bei bestehender Zweitimmatrikulation in einem Fach an einer anderen Hochschule, z.B. im Lehramtsstudium</xsd:documentation>
                                                   </xsd:annotation>
@@ -374,11 +374,11 @@
                             <xsd:complexType>
                                 <xsd:sequence>
                                     <xsd:element minOccurs="0" name="departement"
-                                        type="stud:nonEmptyString"/>
+                                        type="stud:NonEmptyStringType"/>
                                     <xsd:element minOccurs="0" name="fakultaet"
-                                        type="stud:nonEmptyString"/>
+                                        type="stud:NonEmptyStringType"/>
                                     <xsd:element minOccurs="0" name="institut"
-                                        type="stud:nonEmptyString"/>
+                                        type="stud:NonEmptyStringType"/>
                                 </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
@@ -386,32 +386,32 @@
                         <xsd:element name="studiengangsbeendigung">
                             <xsd:complexType>
                                 <xsd:sequence>
-                                    <xsd:element name="grund" type="stud:nonEmptyString"
+                                    <xsd:element name="grund" type="stud:NonEmptyStringType"
                                         minOccurs="0"/>
                                     <xsd:element name="datum" type="xsd:date"/>
                                 </xsd:sequence>
                             </xsd:complexType>
                         </xsd:element>
-                        <xsd:element name="abschlussart" type="stud:nonEmptyString">
+                        <xsd:element name="abschlussart" type="stud:NonEmptyStringType">
                             <xsd:annotation>
                                 <xsd:documentation xml:lang="de">Erlangter oder angestrebter Grad. </xsd:documentation>
                             </xsd:annotation>
                         </xsd:element>
-                        <xsd:element name="geltendePruefungsordnung" type="stud:nonEmptyString"
+                        <xsd:element name="geltendePruefungsordnung" type="stud:NonEmptyStringType"
                             minOccurs="0">
                             <xsd:annotation>
                                 <xsd:documentation xml:lang="de">Zuletzt geltende Prüfungsordnung. </xsd:documentation>
                             </xsd:annotation>
                         </xsd:element>
                         <xsd:element minOccurs="0" name="geltendeDoktoratsverordnung"
-                            type="stud:nonEmptyString">
+                            type="stud:NonEmptyStringType">
                             <xsd:annotation>
                                 <xsd:documentation>Zuletzt geltende Doktoratsverordnung.</xsd:documentation>
                             </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="abschlussdatum" type="xsd:date" minOccurs="0"/>
-                        <xsd:element name="abschlussnote" type="stud:nonEmptyString" minOccurs="0"/>
-                        <xsd:element name="studienerfolg" type="stud:nonEmptyString" minOccurs="0">
+                        <xsd:element name="abschlussnote" type="stud:NonEmptyStringType" minOccurs="0"/>
+                        <xsd:element name="studienerfolg" type="stud:NonEmptyStringType" minOccurs="0">
                             <xsd:annotation>
                                 <xsd:documentation xml:lang="de">Zum Beispiel: "bestanden", "endgültig nicht bestanden".</xsd:documentation>
                             </xsd:annotation>
@@ -423,7 +423,7 @@
                                         <xsd:complexType>
                                             <xsd:sequence>
                                                 <xsd:element name="pruefungssemester"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                 <xsd:element name="fachrichtung"
                                                   type="stud:FachrichtungType" maxOccurs="unbounded">
                                                   <xsd:annotation>
@@ -431,7 +431,7 @@
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="modulcode"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                 <xsd:element name="modul" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation>In den aktuellen Fachanwendungen zur Verwaltung von Studierendendaten wird die Modulbezeichnung häufig nicht vorgehalten. Die Identifikation des Moduls erfolgt dann ausschliesslich über den Modulcode. Sollte die Modulbezeichnung unaufwändig zu übernehmen sein, ist dies aus Nutzungssicht hilfreich.</xsd:documentation>
@@ -439,13 +439,13 @@
                                                   <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element minOccurs="0" name="sprache"
-                                                  type="stud:nonEmptyString">
+                                                  type="stud:NonEmptyStringType">
                                                   <xsd:annotation>
                                                   <xsd:documentation>Gültige Werte für das Attribut "sprache" nach RFC 3066 sind beispielsweise: "en", "en-US", "de" oder "de-CH"</xsd:documentation>
                                                   </xsd:annotation>
                                                   </xsd:element>
                                                   <xsd:element name="modulbezeichnung"
-                                                  type="stud:nonEmptyString"/>
+                                                  type="stud:NonEmptyStringType"/>
                                                   </xsd:sequence>
                                                   </xsd:complexType>
                                                 </xsd:element>
@@ -456,63 +456,63 @@
                                                   <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element minOccurs="0" name="sprache"
-                                                  type="stud:nonEmptyString"/>
+                                                  type="stud:NonEmptyStringType"/>
                                                   <xsd:element name="veranstaltungsbezeichnung"
-                                                  type="stud:nonEmptyString"/>
+                                                  type="stud:NonEmptyStringType"/>
                                                   </xsd:sequence>
                                                   </xsd:complexType>
                                                 </xsd:element>
                                                 <xsd:element name="pruefungstyp"
-                                                  type="stud:nonEmptyString">
+                                                  type="stud:NonEmptyStringType">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: "Abschlussprüfung", "Vordiplomprüfung", "Zwischenprüfung", "Studienleistung", "Prüfungsleistung", "Praktikum", "Doktorprüfung"</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="pruefungsdatum" type="xsd:date"/>
                                                 <xsd:element name="pruefungsart"
-                                                  type="stud:nonEmptyString">
+                                                  type="stud:NonEmptyStringType">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: "schriftliche Prüfung", "mündliche Prüfung", "Hausarbeit", "Klausur"</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="pruefungsform"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: "reale Prüfung", "generierte Prüfung"</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="anerkannteLeistung"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel "ja"/"nein" </xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="externeHochschule"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Angabe der Hochschule, wenn Leistung an einer anderen als der aktuellen Hochschule erbracht wurde.</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="abschlusstragendeLeistung"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel "ja"/"nein" zur Kennzeichnung nicht zugeordneter bzw. Zusatzleistungen</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
-                                                <xsd:element name="note" type="stud:nonEmptyString"
+                                                <xsd:element name="note" type="stud:NonEmptyStringType"
                                                   minOccurs="0"/>
                                                 <xsd:element name="creditPoints"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                 <xsd:element name="pruefungsstatus"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: "bestanden", "nicht bestanden"</xsd:documentation>
                                                   </xsd:annotation>
                                                 </xsd:element>
                                                 <xsd:element name="prueferIn"
-                                                  type="stud:nonEmptyString" minOccurs="0"/>
+                                                  type="stud:NonEmptyStringType" minOccurs="0"/>
                                                 <xsd:element name="arbeitstitel"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation xml:lang="de">Zum Beispiel: Titel der Abschlussarbeit</xsd:documentation>
                                                   </xsd:annotation>
@@ -524,12 +524,12 @@
                                                   <xsd:complexType>
                                                   <xsd:sequence>
                                                   <xsd:element maxOccurs="unbounded"
-                                                  name="auszeichnung" type="stud:nonEmptyString"/>
+                                                  name="auszeichnung" type="stud:NonEmptyStringType"/>
                                                   </xsd:sequence>
                                                   </xsd:complexType>
                                                 </xsd:element>
                                                 <xsd:element name="vermerk"
-                                                  type="stud:nonEmptyString" minOccurs="0">
+                                                  type="stud:NonEmptyStringType" minOccurs="0">
                                                   <xsd:annotation>
                                                   <xsd:documentation>Kann zum Beispiel Eintragungen enthalten wie „Nichterscheinen“ oder „Täuschungsversuch“.</xsd:documentation>
                                                   </xsd:annotation>
@@ -556,23 +556,23 @@
             <xsd:documentation xml:lang="de">Der Name einer natürlichen Person besteht mindestens aus einem Namens-Bestandteil, für den das Element "nachname" zu nutzen ist. Die Angabe weiterer Namensbestandteile ist optional, da diese nicht vorausgesetzt werden können. Die Namenszusätze "vorangestellt", "mittig" und "nachgestellt" können jeweils ein Mal verwendet werden. Mehrere direkt aufeinanderfolgende Namenszusätze (z.B. " Prof. Dr. Freifrau") sind in einem Element zusammenzuführen.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="nachname" type="stud:nonEmptyString">
+            <xsd:element name="nachname" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Auch zur Erfassung des Namens, falls die Person einen einzigen Namen ohne Unterscheidung von Vor- und Nachame trägt.</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="geburtsname" minOccurs="0" type="stud:nonEmptyString"/>
-            <xsd:element name="vorname" minOccurs="0" type="stud:nonEmptyString"/>
+            <xsd:element name="geburtsname" minOccurs="0" type="stud:NonEmptyStringType"/>
+            <xsd:element name="vorname" minOccurs="0" type="stud:NonEmptyStringType"/>
             <xsd:element name="namenszusaetze" minOccurs="0" type="stud:NamenszusaetzeType">
                 <xsd:unique name="namenszusatz_unique">
                     <xsd:selector xpath="stud:namenszusatz"/>
                     <xsd:field xpath="@typ"/>
                 </xsd:unique>
             </xsd:element>
-            <xsd:element name="abweichenderName" minOccurs="0" type="stud:nonEmptyString"
+            <xsd:element name="abweichenderName" minOccurs="0" type="stud:NonEmptyStringType"
                 maxOccurs="unbounded"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" name="fruehererName"
-                type="stud:nonEmptyString"/>
+                type="stud:NonEmptyStringType"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="NamenszusaetzeType">
@@ -583,8 +583,8 @@
             <xsd:element name="namenszusatz" maxOccurs="3">
                 <xsd:complexType>
                     <xsd:simpleContent>
-                        <xsd:extension base="stud:nonEmptyString">
-                            <xsd:attribute name="typ" type="stud:namenszusatz-types" use="required"
+                        <xsd:extension base="stud:NonEmptyStringType">
+                            <xsd:attribute name="typ" type="stud:NamenszusatzType" use="required"
                             />
                         </xsd:extension>
                     </xsd:simpleContent>
@@ -592,8 +592,8 @@
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
-    <xsd:simpleType name="namenszusatz-types">
-        <xsd:restriction base="stud:nonEmptyString">
+    <xsd:simpleType name="NamenszusatzType">
+        <xsd:restriction base="stud:NonEmptyStringType">
             <xsd:annotation>
                 <xsd:documentation xml:lang="de">Beispiele für "vorangestellt": Dr., Prof., Freifrau, Freiherr; "mittig": von, zu, ben; "nachgestellt": M.A., M.Sc., M.LL., PD, PHD</xsd:documentation>
             </xsd:annotation>
@@ -624,9 +624,9 @@
             <xsd:documentation>Angaben zum Ort der Geburt der Person. Da in der Schweiz üblicherweise nur der Heimatort erfasst wird, ist nur die Angabe des Geburtslandes innerhalb des Elements verpflichtend.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="ort" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="kanton" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="land" type="stud:nonEmptyString" minOccurs="1"/>
+            <xsd:element name="ort" type="stud:NonEmptyStringType" minOccurs="0"/>
+            <xsd:element name="kanton" type="stud:NonEmptyStringType" minOccurs="0"/>
+            <xsd:element name="land" type="stud:NonEmptyStringType" minOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="HeimatortType">
@@ -634,8 +634,8 @@
             <xsd:documentation>Angaben zum Heimatort (Bürgerort) bei einer Schweizer Staatsbürgerschaft.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="ort" type="stud:nonEmptyString"/>
-            <xsd:element name="kanton" type="stud:nonEmptyString" minOccurs="1"/>
+            <xsd:element name="ort" type="stud:NonEmptyStringType"/>
+            <xsd:element name="kanton" type="stud:NonEmptyStringType" minOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="DoktorarbeitType">
@@ -643,33 +643,33 @@
             <xsd:documentation>Angaben zur Doktorarbeit als Teil einer Studienleistung. Das Element dient als Ergänzung zu den allgemeingültigen Angaben der Leistungen, die bei einer Doktorarbeit ebenfalls befüllt werden.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="art" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="art" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Z.B. "Kumulative Dissertation", "Dissertation"</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element minOccurs="1" name="titel" type="stud:nonEmptyString"/>
+            <xsd:element minOccurs="1" name="titel" type="stud:NonEmptyStringType"/>
             <xsd:element maxOccurs="1" minOccurs="0" name="abgabedatum" type="xsd:date"/>
-            <xsd:element name="dissertationsnummer" type="stud:nonEmptyString">
+            <xsd:element name="dissertationsnummer" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Dissertationsnummer der Doktorarbeit</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
             <xsd:element minOccurs="1" name="pruefungsdatum" type="xsd:date"
                 maxOccurs="unbounded"/>
-            <xsd:element minOccurs="0" name="beantragterTitel" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="beantragterTitel" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Beantragter Doktortitel</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element minOccurs="0" name="publikationsort" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="publikationsort" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Angaben zum Publikationsort der Doktorarbeit</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element minOccurs="0" name="pruefungsstatus" type="stud:nonEmptyString"/>
-            <xsd:element maxOccurs="unbounded" name="betreuerIn" type="stud:nonEmptyString"/>
-            <xsd:element minOccurs="0" name="co-prueferIn" type="stud:nonEmptyString"
+            <xsd:element minOccurs="0" name="pruefungsstatus" type="stud:NonEmptyStringType"/>
+            <xsd:element maxOccurs="unbounded" name="betreuerIn" type="stud:NonEmptyStringType"/>
+            <xsd:element minOccurs="0" name="co-prueferIn" type="stud:NonEmptyStringType"
                 maxOccurs="unbounded"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -678,12 +678,12 @@
             <xsd:documentation>Angaben zur Bezeichnung des Studiengangs mit optionaler Sprachkennzeichnung. eCH-0018 empfiehlt Sprachmarkierungen nicht über Attribute, sondern über Elementpaare zu lösen.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="sprache" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="sprache" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Gültige Werte für das Element "sprache" nach RFC 3066 sind beispielsweise: "en", "en-US", "de" oder "de-CH"</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="studiengangsbezeichnung" type="stud:nonEmptyString"/>
+            <xsd:element name="studiengangsbezeichnung" type="stud:NonEmptyStringType"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="FachrichtungType">
@@ -691,12 +691,12 @@
             <xsd:documentation>Angaben zur Bezeichnung der Fachrichtung mit optionaler Sprachkennzeichnung. eCH-0018 empfiehlt Sprachmarkierungen nicht über Attribute, sondern über Elementpaare zu lösen.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element minOccurs="0" name="sprache" type="stud:nonEmptyString">
+            <xsd:element minOccurs="0" name="sprache" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Gültige Werte für das Element "sprache" nach RFC 3066 sind beispielsweise: "en", "en-US", "de" oder "de-CH"</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element minOccurs="1" name="fachbezeichnung" type="stud:nonEmptyString"/>
+            <xsd:element minOccurs="1" name="fachbezeichnung" type="stud:NonEmptyStringType"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="AnschriftType">
@@ -704,13 +704,13 @@
             <xsd:documentation>Angaben zu einer Anschrift. Für die Spezifizierung der Anschriften von Studierenden ist eine Unterscheidung in Heimatanschrift und Semesteranschrift vorgesehen.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="strasse" type="stud:nonEmptyString"/>
-            <xsd:element name="hausnummer" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="postleitzahl" type="stud:nonEmptyString"/>
-            <xsd:element name="ort" type="stud:nonEmptyString"/>
-            <xsd:element name="kanton" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="land" type="stud:nonEmptyString" minOccurs="0"/>
-            <xsd:element name="adresszusatz" type="stud:nonEmptyString" minOccurs="0"/>
+            <xsd:element name="strasse" type="stud:NonEmptyStringType"/>
+            <xsd:element name="hausnummer" type="stud:NonEmptyStringType" minOccurs="0"/>
+            <xsd:element name="postleitzahl" type="stud:NonEmptyStringType"/>
+            <xsd:element name="ort" type="stud:NonEmptyStringType"/>
+            <xsd:element name="kanton" type="stud:NonEmptyStringType" minOccurs="0"/>
+            <xsd:element name="land" type="stud:NonEmptyStringType" minOccurs="0"/>
+            <xsd:element name="adresszusatz" type="stud:NonEmptyStringType" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="GeldbetragType">
@@ -718,7 +718,7 @@
             <xsd:documentation>Ein Geldbetrag besteht aus der Angabe der Währung, sowie dem Betrag als Dezimalzahl.</xsd:documentation>
         </xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="waehrung" type="stud:nonEmptyString">
+            <xsd:element name="waehrung" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Gültige Werte für das Element "waehrung" nach ISO 4217 sind beispielsweise: "CHF", "EUR" oder "USD"</xsd:documentation>
                 </xsd:annotation>
@@ -733,14 +733,14 @@
         <xsd:sequence>
             <xsd:element name="beginn" minOccurs="0" type="xsd:date"/>
             <xsd:element name="ende" minOccurs="0" type="xsd:date"/>
-            <xsd:element name="anmerkung" minOccurs="0" type="stud:nonEmptyString">
+            <xsd:element name="anmerkung" minOccurs="0" type="stud:NonEmptyStringType">
                 <xsd:annotation>
                     <xsd:documentation>Zusätzliche Informationen zum Zeitraum oder den in "Beginn" und "Ende" stehenden Angaben.</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
-    <xsd:simpleType name="nonEmptyString">
+    <xsd:simpleType name="NonEmptyStringType">
         <xsd:restriction base="xsd:string">
             <xsd:minLength value="1"/>
         </xsd:restriction>
